@@ -45,6 +45,8 @@ void Process7zWorker::unzip()
 		emit unZipFinished();
 		return;
 	}
+	//zipFilePath = "\"" + zipFilePath + "\"";
+	//unZipFilePath = "\"" + unZipFilePath + "\"";
 
 	wchar_t command[1024];
 	swprintf_s(command,
@@ -77,7 +79,7 @@ void Process7zWorker::unzip()
 		return;
 	}
 	CloseHandle(hWrite);
-	char buffer[4095] = { 0 };       //ÓÃ4KµÄ¿Õ¼äÀ´´æ´¢Êä³öµÄÄÚÈİ£¬Ö»Òª²»ÊÇÏÔÊ¾ÎÄ¼şÄÚÈİ£¬Ò»°ãÇé¿öÏÂÊÇ¹»ÓÃÁË¡£
+	char buffer[4095] = { 0 };       //ç”¨4Kçš„ç©ºé—´æ¥å­˜å‚¨è¾“å‡ºçš„å†…å®¹ï¼Œåªè¦ä¸æ˜¯æ˜¾ç¤ºæ–‡ä»¶å†…å®¹ï¼Œä¸€èˆ¬æƒ…å†µä¸‹æ˜¯å¤Ÿç”¨äº†ã€‚
 	DWORD bytesRead;
 	int k = 0;
 	while (true)

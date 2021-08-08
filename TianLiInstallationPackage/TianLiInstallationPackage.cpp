@@ -291,7 +291,9 @@ void TianLiInstallationPackage::Install()
 
 			unZip_7z = new Process7zWorker(NULL);
 			unZip_7z->setZipFilePath(SourcePath);
+
 			unZip_7z->setUnZipFilePath(InstallIndexPath);
+
 
 			connect(unZip_7z, &Process7zWorker::unZipError, this, &TianLiInstallationPackage::unZip_Error);
 			connect(unZip_7z, &Process7zWorker::unZipProcess, this, &TianLiInstallationPackage::unZip_Process);

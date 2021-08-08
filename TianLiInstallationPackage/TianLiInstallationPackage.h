@@ -41,22 +41,22 @@ private:
 
 private:
 	QString SourcePath;
-	QString SourceName = "/source.7z";
-	QString LinkerName = "天理";
-	QString ExportName = "/TianLi_Launcher.exe";
+	QString SourceName = "/Source.Zip";
+	QString LinkerName = "空荧酒馆原神地图";
+	QString ExportName = "/map.exe";
 #ifdef _DEBUG
 	QString InstallPath = "C:/Program Files";// "E:/tmp/launcher";//"C:/Program Files";
 #else
 	QString InstallIndexPath = "C:/Program Files";
 	QString InstallPath = "C:/Program Files";
 #endif
-	QString InstallDirName = "/天理";
-	QString Url_Agreement = "https://yuanshen.weixitianlizhi.ren/";
+	QString InstallDirName = "/空荧酒馆原神地图";
+	QString Url_Agreement = "https://yuanshen.site/docs/agreement.html";
 
 	Process7zWorker *unZip_7z = nullptr;
 	QThread *unzipProcess = nullptr;
 private:
-	int Size = 223;
+	int Size = 254;
 	QString TextStr0 = QString::number(Size) + "MB";
 	QString ShowTextStr0 = "是否退出安装";
 	QString ShowTextStr1 = "需要同意许可协议";
